@@ -13,7 +13,7 @@ console.log(word.length);
 const fruit = "Banaan";
 const vegetable = "Aardappel";
 
-
+console.log(fruit.length > vegetable.length);
 
 /* Opdracht 2 */
 //  Zorg ervoor dat de laatste letter van het woord in fruit en vegetable (hierboven) in de terminal gelogd wordt.
@@ -21,6 +21,15 @@ const vegetable = "Aardappel";
 // ---- Verwachte uitkomst voor fruit: "n"
 // ---- Verwachte uitkomst voor vegetable: "l"
 
+//const lastIndexFruit = fruit.length -1;
+//const lastIndexVegetables = vegetable.length -1;
+
+//const lastFruit = fruit.substring(lastIndexFruit);
+//const lastVegetables = vegetable.substring(lastIndexVegetables);
+
+//console.log(lastVegetables, lastFruit);
+
+console.log(fruit.substring(fruit.length - 1), vegetable.substring(vegetable.length - 1));
 
 
 /* Opdracht 3 */
@@ -28,7 +37,8 @@ const vegetable = "Aardappel";
 // ---- Verwachte uitkomst: "De kat krabt de krullen van de trap"
 
 const userInput = "  De kat krabt de krullen van de trap ";
-
+const trimmed = userInput.trim();
+console.log(trimmed);
 
 
 /* Opdracht 4 */
@@ -36,14 +46,20 @@ const userInput = "  De kat krabt de krullen van de trap ";
 // ---- Verwachte uitkomst: true
 
 const story = "We vinden de behaalde resultaten werkelijk prachtig. Fantastisch, nietwaar?"
-
+const fantastic = story.includes('Fantastisch');
+console.log(fantastic);
 
 
 /* Opdracht 5 */
 // Knip de vraag van bovenstaande tekst (story) af, zodat alleen het eerste gedeelte overblijft en log dit in de terminal.
 // ---- Verwachte uitkomst: "We vinden de behaalde resultaten werkelijk prachtig."
 
+const endOfSentence = story.indexOf('.');
 
+const sentence = story.substring(0, endOfSentence + 1);
+console.log(sentence);
+
+//console.log(story.substring(0, 52));
 
 /* Opdracht 6 */
 // Maak van onderstaand bedrag een Nederlands bedrag door het volgende te doen:
@@ -55,6 +71,5 @@ const story = "We vinden de behaalde resultaten werkelijk prachtig. Fantastisch,
 const price = "$35.59";
 
 
-
-
-
+const euroPrice = price.replace("$", "€").replace(".", ",");
+console.log(euroPrice);
